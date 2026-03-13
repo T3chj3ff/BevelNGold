@@ -1,0 +1,45 @@
+The Bevel & Gold Digital Ecosystem: Comprehensive Audit & Strategy
+Prepared for: Mike | Bevel & Gold Piercing
+Prepared by: [Your Name/Agency]
+
+1. Executive Summary: The "Digital Disconnect"
+Mike, over the last week, I have conducted a deep-dive audit of your digital footprint, local competitor search volume, social media ecosystem, and community reputation across Colorado Springs.
+
+You have the hardest parts of business completely mastered. Your physical studio is immaculate—a masterclass in "Moody Botanical Mid-Century" design. Your community reputation is flawless; local Reddit forums consistently name-drop you as the best, most patient piercer in town, and winning Silver in the CS Independent proves it.
+
+The Bottleneck: Your real-world reputation is a 10/10, but your digital storefront is acting like a bouncer at the door instead of a welcome mat. Your online presence does not match the premium, $150+ solid gold experience you provide in the chair. This audit outlines exactly where money is being left on the table and the blueprint to capture it.
+
+2. Market Positioning & Competitor Analysis
+To dominate the Colorado Springs market, we must strategically position your digital brand against the local "Big Three":
+
+The Hive (Downtown): High volume and aesthetic, but locals complain about downtown parking and an impersonal, rushed vibe.
+
+The B&G Advantage: We will market you as the premium, accessible luxury alternative in Northern Springs. No parking stress, and an emphasis on your celebrated bedside manner.
+
+Kind Find (Westside): Heavily markets "bespoke luxury" and APP certification.
+
+The B&G Advantage: We will match their authority by digitally showcasing your in-house jewelry anodizing and visible, hospital-grade sterilization, paired with a much warmer, unpretentious atmosphere.
+
+Freaky's / Certified Tattoos: High-volume, $40 surgical steel walk-ins.
+
+The B&G Advantage: We do not compete here. Your new digital funnel will deliberately filter out bargain-hunters and attract clients looking for fine jewelry curation.
+
+3. The Website Redesign: Translating the Physical Space
+Currently, bevelandgold.com operates like a legal waiver. The homepage is dominated by strict shop policies (ID rules, late fees, age limits). While necessary, hitting cold traffic with a "wall of NOs" destroys conversion rates.
+
+We are going to digitize your physical shop so the website feels exactly like walking through your front doors.
+
+The Digital Color Palette: We extracted the exact tones of your interior. The site will utilize your Matte Charcoal walls (#1C1C1E) as the foundation, accented by the Olive/Sage Green (#616A53) of your accent wall, and highlighted with the Antiqued Gold (#D4AF37) of your logo and ornate mirror for our primary "Book Now" buttons.
+
+Texture & Typography: We will use sophisticated Serif fonts (like Playfair Display) to match your window decals, and incorporate subtle digital textures—like arch-shaped image masks that mirror your antique floor mirror, and subtle vertical fluting to match your front desk.
+
+The "Wall of Text" Fix: We will move all policies to a dedicated FAQ page and integrate a mandatory "I agree to these terms" checkbox into the booking widget. The homepage will be reserved exclusively for high-res jewelry loops and selling the luxury experience.
+
+4. The Traffic Ecosystem & "Wall of Love"
+Your current digital assets are operating on isolated islands. We are going to connect them into an automated revenue engine.
+
+Fixing the TikTok Funnel: You have great traction on TikTok (@bevel.gold), but no bridge to your website. We will optimize your TikTok for Local SEO (Gen-Z uses TikTok like Google Maps) and build a dedicated /links landing page on the new site specifically designed to convert mobile social traffic instantly.
+
+The Dynamic "Wall of Love": You have incredible 5-star Google Reviews with client photos that go unseen. We will integrate a live API feed directly onto your homepage. Every time a client leaves a 5-star review with a photo of their fresh piercing, the website will automatically update to display it, building 24/7 automated trust.
+
+Bulletproof ADA Compliance: Search engines heavily reward sites that are built correctly. We will ensure the new site adheres strictly to WCAG 2.1 AA accessibility standards, ensuring proper contrast ratios and screen-reader compatibility. This ensures your site is legally protected and accessible to every potential client.
