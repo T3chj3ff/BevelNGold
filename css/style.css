@@ -527,7 +527,7 @@ footer {
 }
 
 .footer-moody {
-  background-image: url('../images/espresso-tufting.jpg');
+  background-image: url('../images/espresso-tufting.webp');
   background-size: cover;
   background-position: center bottom;
   background-color: var(--bg-primary);
@@ -567,7 +567,7 @@ footer {
   padding: var(--spacing-lg);
   text-align: center;
   /* Mood Leather Tufting */
-  background-image: url('../images/espresso-tufting.jpg');
+  background-image: url('../images/espresso-tufting.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
