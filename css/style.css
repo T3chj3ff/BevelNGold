@@ -3,29 +3,34 @@
 /* CSS Variables */
 :root {
   /* Moody Botanical Mid-Century Palette */
-  --bg-primary: #232323; /* Explicitly matching the exact logo background hex */
-  --bg-secondary: #555D46; /* Olive Drab replacing Sage Green */
-  --accent-gold: #D4AF37; /* Antiqued Gold matching the ornate mirror */
+  --bg-primary: #232323;
+  /* Explicitly matching the exact logo background hex */
+  --bg-secondary: #555D46;
+  /* Olive Drab replacing Sage Green */
+  --accent-gold: #D4AF37;
+  /* Antiqued Gold matching the ornate mirror */
   --accent-gold-hover: #b8972f;
-  --warm-neutral: #d2c5b4; /* Light Oak Wood from the jewelry cases */
+  --warm-neutral: #d2c5b4;
+  /* Light Oak Wood from the jewelry cases */
   --text-primary: #F8F9FA;
   --text-dark: #121213;
-  
+
   /* Fonts */
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
-  
+
   /* Spacing */
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 2rem;
   --spacing-xl: 4rem;
-  
+
   /* Border Radius */
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 16px;
-  --radius-arch: 200px 200px 0 0; /* Arch shaped mask */
+  --radius-arch: 200px 200px 0 0;
+  /* Arch shaped mask */
 }
 
 /* Reset and Base Styles */
@@ -42,6 +47,8 @@ body {
   line-height: 1.6;
   position: relative;
   min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* GLOBAL MATTE NOISE OVERLAY */
@@ -50,29 +57,48 @@ body::before {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none; /* Invisible to mouse clicks */
-  z-index: 0; /* Behind content */
-  opacity: 0.04; /* Luxury sweet spot */
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  /* Invisible to mouse clicks */
+  z-index: 0;
+  /* Behind content */
+  opacity: 0.04;
+  /* Luxury sweet spot */
   background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
 }
 
-main, header, footer, section {
+main,
+header,
+footer,
+section {
   position: relative;
   z-index: 1;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 600;
   margin-bottom: var(--spacing-sm);
   color: var(--accent-gold);
 }
 
-h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
-h2 { font-size: clamp(2rem, 4vw, 3rem); }
-h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
 
 p {
   margin-bottom: var(--spacing-md);
@@ -86,7 +112,8 @@ a {
   transition: color 0.3s ease;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: var(--text-primary);
 }
 
@@ -109,7 +136,8 @@ img {
   justify-content: center;
   padding: 1rem 2rem;
   background-color: var(--accent-gold);
-  color: var(--text-dark); /* Ensure 4.5:1 contrast */
+  color: var(--text-dark);
+  /* Ensure 4.5:1 contrast */
   font-family: var(--font-body);
   font-weight: 600;
   text-transform: uppercase;
@@ -124,7 +152,8 @@ img {
 .btn:hover {
   background-color: var(--accent-gold-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3); /* Soft gold glow */
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  /* Soft gold glow */
 }
 
 .btn-large {
@@ -195,9 +224,10 @@ img {
 
 /* Luxury Container Card Accent */
 .luxury-card {
-  background-color: var(--bg-secondary); /* Sage Green Accent */
+  background-color: var(--bg-secondary);
+  /* Sage Green Accent */
   border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
   overflow: hidden;
   position: relative;
 }
@@ -271,11 +301,13 @@ img {
   aspect-ratio: 3/4;
   object-fit: cover;
   transition: box-shadow 0.4s ease, transform 0.4s ease;
-  background-color: var(--bg-primary); /* Prevents transparent image bleeding */
+  background-color: var(--bg-primary);
+  /* Prevents transparent image bleeding */
 }
 
 .arch-mask:hover {
-  box-shadow: 0 0 30px rgba(212, 175, 55, 0.4); /* Golden Halation */
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+  /* Golden Halation */
   transform: translateY(-5px);
 }
 
@@ -288,7 +320,8 @@ img {
 
 /* Hero Section */
 .hero {
-  min-height: 80vh; /* Replaced 100vh so navbar flow works */
+  min-height: 80vh;
+  /* Replaced 100vh so navbar flow works */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -335,7 +368,7 @@ img {
   bottom: var(--spacing-lg);
   right: var(--spacing-lg);
   z-index: 100;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Grid Layouts */
@@ -364,8 +397,11 @@ img {
   transition: box-shadow 0.4s ease, transform 0.4s ease;
 }
 
-.review-card:hover, .service-card:hover { /* Adding generalized halation */
-  box-shadow: 0 0 40px rgba(212, 175, 55, 0.15); /* Subtle Golden Halation */
+.review-card:hover,
+.service-card:hover {
+  /* Adding generalized halation */
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.15);
+  /* Subtle Golden Halation */
   transform: translateY(-5px);
   border-color: var(--accent-gold);
 }
@@ -435,7 +471,8 @@ img {
 
 .accordion-content[aria-hidden="false"] {
   visibility: visible;
-  max-height: 1000px; /* Arbitrary large number */
+  max-height: 1000px;
+  /* Arbitrary large number */
   padding-bottom: var(--spacing-lg);
 }
 
@@ -486,7 +523,7 @@ footer {
   background-image: url('../images/espresso-tufting.jpg');
   background-size: cover;
   background-position: center bottom;
-  background-color: var(--bg-primary); 
+  background-color: var(--bg-primary);
   position: relative;
   z-index: 1;
 }
@@ -498,7 +535,8 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(35, 35, 35, 0.85); /* Darken leather for legibility */
+  background-color: rgba(35, 35, 35, 0.85);
+  /* Darken leather for legibility */
   z-index: -1;
 }
 
@@ -506,8 +544,9 @@ footer {
   background: linear-gradient(135deg, #E6C252 0%, #B8972F 100%);
   padding: 8px;
   border-radius: var(--radius-sm);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.8), inset 0 1px 1px rgba(255,255,255,0.4);
-  mix-blend-mode: normal; /* Override lighten effect for plaque look */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+  mix-blend-mode: normal;
+  /* Override lighten effect for plaque look */
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -525,15 +564,18 @@ footer {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-color: var(--bg-primary); /* Fallback */
-  box-shadow: inset 0 0 100px rgba(0,0,0,0.8); /* Edge vignette for mood */
+  background-color: var(--bg-primary);
+  /* Fallback */
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8);
+  /* Edge vignette for mood */
 }
 
 .links-page .site-logo {
-    border-radius: var(--radius-arch);
-    margin-bottom: var(--spacing-md);
-    background-color: rgba(35, 35, 35, 0.4); /* Subtle behind logo */
-    padding: var(--spacing-sm);
+  border-radius: var(--radius-arch);
+  margin-bottom: var(--spacing-md);
+  background-color: rgba(35, 35, 35, 0.4);
+  /* Subtle behind logo */
+  padding: var(--spacing-sm);
 }
 
 .links-brand {
@@ -560,10 +602,12 @@ footer {
     justify-content: space-between;
     padding-top: var(--spacing-md);
   }
+
   .nav-brand {
     font-size: 1.2rem;
     flex-direction: row;
   }
+
   .site-logo {
     height: 60px;
   }
@@ -579,24 +623,29 @@ footer {
     align-items: center;
     padding-top: var(--spacing-xl);
     transition: left 0.3s ease;
+    overflow-y: auto;
+    z-index: 2000;
   }
-  
+
   .nav-links.active {
     left: 0;
   }
-  
+
   .menu-toggle {
     display: block;
+    z-index: 2001;
+    position: relative;
+    padding: var(--spacing-sm);
   }
-  
+
   .grid-2 {
     grid-template-columns: 1fr;
   }
-  
+
   .hero-content {
     text-align: center;
   }
-  
+
   .sticky-cta {
     bottom: var(--spacing-md);
     right: 50%;

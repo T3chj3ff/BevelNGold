@@ -6,34 +6,42 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.getElementById('nav-links');
 
   if (menuToggle && navLinks) {
+    const closeMenu = () => {
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open menu');
+      navLinks.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+
     menuToggle.addEventListener('click', () => {
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-      menuToggle.setAttribute('aria-expanded', !isExpanded);
-      navLinks.classList.toggle('active');
-      
-      // Update aria-label based on state
-      if (!isExpanded) {
-        menuToggle.setAttribute('aria-label', 'Close menu');
-        // Prevent scrolling on body when menu is open
-        document.body.style.overflow = 'hidden';
+      if (isExpanded) {
+        closeMenu();
       } else {
-        menuToggle.setAttribute('aria-label', 'Open menu');
-        document.body.style.overflow = '';
+        menuToggle.setAttribute('aria-expanded', 'true');
+        menuToggle.setAttribute('aria-label', 'Close menu');
+        navLinks.classList.add('active');
+        document.body.style.overflow = 'hidden';
       }
+    });
+
+    // Close menu when a navigation link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
     });
   }
 
   // Accordion Logic
   const accordions = document.querySelectorAll('.accordion');
-  
+
   accordions.forEach(accordion => {
     const header = accordion.querySelector('.accordion-header');
     const content = accordion.querySelector('.accordion-content');
-    
+
     if (header && content) {
       header.addEventListener('click', () => {
         const isExpanded = header.getAttribute('aria-expanded') === 'true';
-        
+
         // Ensure only one accordion closes smoothly (optional, remove to allow multiple open)
         /*
         accordions.forEach(a => {
@@ -43,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             c.setAttribute('aria-hidden', 'true');
         });
         */
-        
+
         // Toggle current accordion
         header.setAttribute('aria-expanded', !isExpanded);
         content.setAttribute('aria-hidden', isExpanded);
@@ -56,17 +64,17 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
       // Only prevent default if it's a valid ID selector
-      if(targetId !== '#' && targetId.startsWith('#')) {
-          e.preventDefault();
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-              targetElement.scrollIntoView({
-                  behavior: 'smooth'
-              });
-              // Update focus for accessibility
-              targetElement.setAttribute('tabindex', '-1');
-              targetElement.focus();
-          }
+      if (targetId !== '#' && targetId.startsWith('#')) {
+        e.preventDefault();
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+          // Update focus for accessibility
+          targetElement.setAttribute('tabindex', '-1');
+          targetElement.focus();
+        }
       }
     });
   });
