@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeMenu = () => {
       menuToggle.setAttribute('aria-expanded', 'false');
       menuToggle.setAttribute('aria-label', 'Open menu');
+      menuToggle.innerHTML = '☰';
       navLinks.classList.remove('active');
       document.body.style.overflow = '';
     };
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         menuToggle.setAttribute('aria-expanded', 'true');
         menuToggle.setAttribute('aria-label', 'Close menu');
+        menuToggle.innerHTML = '✕';
         navLinks.classList.add('active');
         document.body.style.overflow = 'hidden';
       }
@@ -58,6 +60,24 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+  // Sticky CTA Scroll Logic
+  const stickyCta = document.querySelector('.sticky-cta');
+  if (stickyCta) {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        stickyCta.style.opacity = '1';
+        stickyCta.style.pointerEvents = 'auto';
+      } else {
+        stickyCta.style.opacity = '0';
+        stickyCta.style.pointerEvents = 'none';
+      }
+    };
+    // Initial check
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+  }
+
 
   // Smooth Scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
